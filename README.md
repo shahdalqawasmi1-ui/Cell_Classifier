@@ -14,7 +14,13 @@ license: mit
 Machine-learning model that classifies **phase-contrast micrographs** as **differentiated** or **undifferentiated**,
 with a web interface (single image + batch mode) and a tile-level heatmap showing which regions drive the decision.
 
-![App screenshot](results/app_screenshot.png)
+## 🌐 Live demo: https://shahdalqawasmi1-ui.github.io/Cell_Classifier/
+
+The demo runs **entirely in the browser** (ONNX Runtime Web), so images never leave the user's device.
+It works on desktop and mobile; the first visit downloads the model (~85 MB).
+Browser predictions match the Python model (difference < 0.001).
+
+![Web app](results/web_app_screenshot.png)
 
 ## Pilot results
 
@@ -86,6 +92,7 @@ The second-level folders (donor or experiment) keep the train/test split free of
 ## Repository layout
 
 ```
+docs/                   browser app (GitHub Pages): index.html + ONNX model + head.json
 app.py                  Gradio web interface
 predict.py              command-line batch prediction
 cellclf/core.py         preprocessing + inference

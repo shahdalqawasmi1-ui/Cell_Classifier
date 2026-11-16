@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cell Differentiation Classifier</title>
+<script src="https://cdn.jsdelivr.net/npm/onnxruntime-web@1.20.1/dist/ort.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/utif@3.1.0/UTIF.js"></script>
+<style>
+  :root { --bg:#f6f7fb; --card:#fff; --ink:#1d2433; --mute:#667085; --line:#e4e7ee; --acc:#4f46e5; --red:#c2410c; --blue:#1d4ed8; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background:var(--bg); color:var(--ink); }
+  header { padding:28px 20px 8px; max-width:1100px; margin:auto; }
+  h1 { margin:0 0 6px; font-size:26px; }
+  header p { margin:0; color:var(--mute); }
+  main { max-width:1100px; margin:auto; padding:16px 20px 40px; }
+  .tabs { display:flex; gap:6px; border-bottom:1px solid var(--line); margin-bottom:18px; }
+  .tab { padding:10px 14px; cursor:pointer; border:none; background:none; font-size:15px; color:var(--mute); border-bottom:2px solid transparent; }
+  .tab.on { color:var(--acc); border-bottom-color:var(--acc); font-weight:600; }
+  .pane { display:none; } .pane.on { display:block; }
+  .grid { display:grid; grid-template-columns: 1fr 1fr; gap:18px; }
+  @media (max-width: 800px) { .grid { grid-template-columns: 1fr; } }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:16px; }
+  .drop { border:2px dashed #c7cbe0; border-radius:12px; padding:26px; text-align:center; color:var(--mute); cursor:pointer; }
+  .drop.hover { border-color:var(--acc); background:#eef0ff; }
+  .ex { display:flex; gap:8px; margin-top:12px; flex-wrap:wrap; }
+  .ex img { width:76px; height:57px; object-fit:cover; border-radius:8px; cursor:pointer; border:2px solid transparent; }
+  .ex img:hover { border-color:var(--acc); }
+  canvas { max-width:100%; border-radius:10px; display:block; }
+  .label { font-size:26px; font-weight:700; margin:4px 0; }
+  .bar { height:12px; background:#e9ebf3; border-radius:6px; overflow:hidden; margin:6px 0 2px; }
+  .bar > div { height:100%; background:linear-gradient(90deg, var(--blue), var(--red)); }
+  .muted { color:var(--mute); font-size:14px; }
+  .status { font-size:14px; color:var(--acc); min-height:20px; margin-top:10px; }
+  table { width:100%; border-collapse:collapse; font-size:14px; }
+  th, td { text-align:left; padding:8px; border-bottom:1px solid var(--line); }
+  button.primary { background:var(--acc); color:#fff; border:none; border-radius:10px; padding:10px 16px; font-size:15px; cursor:pointer; }
+  button.primary:disabled { opacity:.5; }
+  .legend { display:flex; align-items:center; gap:8px; font-size:13px; color:var(--mute); margin-top:8px; }
+  .legend span.sw { width:14px; height:14px; border-radius:3px; display:inline-block; }
+  .warn { background:#fff7ed; border:1px solid #fed7aa; color:#9a3412; padding:8px 10px; border-radius:8px; font-size:14px; margin-top:8px; }
+  img.fig { max-width:100%; border-radius:10px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>🔬 Cell Differentiation Classifier</h1>
+  <p>Upload a phase-contrast micrograph (TIFF, PNG or JPG). Analysis runs <b>entirely in your browser</b>: images are never uploaded.</p>
+</header>
+<main>
+  <div class="tabs">
+    <button class="tab on" data-t="single">Single image</button>
+    <button class="tab" data-t="batch">Batch</button>
+    <button class="tab" data-t="about">About</button>
+  </div>
+
+  <section class="pane on" id="single">
+    <div class="grid">
+      <div class="card">
+        <div class="drop" id="drop1">Click or drop an image here<br><span class="muted">.tif .tiff .png .jpg</span></div>
+        <input type="file" id="file1" accept=".tif,.tiff,.png,.jpg,.jpeg,.bmp,image/*" hidden>
+        <div class="muted" style="margin-top:12px">Or try an example:</div>
+        <div class="ex" id="examples"></div>
+        <div class="status" id="status1">Loading model (~85 MB, first visit only)…</div>
+      </div>
+      <div class="card" id="resultCard" style="display:none">
+        <div class="muted">Prediction</div>
+        <div class="label" id="lbl"></div>
+        <div class="bar"><div id="barfill" style="width:0"></div></div>
+        <div class="muted" id="pline"></div>
+        <div id="warn"></div>
+        <canvas id="heat" style="margin-top:12px"></canvas>
+        <div class="legend"><span class="sw" style="background:#1d4ed8"></span>looks undifferentiated
+          <span class="sw" style="background:#c2410c;margin-left:10px"></span>looks differentiated</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pane" id="batch">
+    <div class="card">
+      <div class="drop" id="drop2">Click or drop many images here</div>
+      <input type="file" id="file2" multiple accept=".tif,.tiff,.png,.jpg,.jpeg,.bmp,image/*" hidden>
+      <div class="status" id="status2"></div>
+      <table id="tbl" style="display:none"><thead><tr><th>File</th><th>Prediction</th><th>P(differentiated)</th></tr></thead><tbody></tbody></table>
+      <p><button class="primary" id="csv" style="display:none">Download CSV</button></p>
+    </div>
+  </section>
+
+  <section class="pane" id="about">
+    <div class="card">
+      <h3 style="margin-top:0">About this model</h3>
+      <ul>
+        <li><b>Task:</b> differentiated vs undifferentiated cells from phase-contrast images.</li>
+        <li><b>Training data:</b> 229 open images of SH-SY5Y cells, retinoic-acid-differentiated (n=122) vs untreated controls (n=107),
+          from 4 independent experiments (<a href="https://zenodo.org/records/19634700" target="_blank">Yordanov &amp; Hristiva, Zenodo 19634700, CC-BY 4.0</a>).</li>
+        <li><b>Method:</b> each image is split into 512-px tiles; a frozen DINOv2 ViT-S/14 turns each tile into an embedding;
+          logistic regression scores each tile; the image score is the mean of its tile scores.</li>
+        <li><b>Validation (leave-one-experiment-out):</b> accuracy <b>87.8%</b> (95% CI 83–92%), AUC <b>0.92</b>, sensitivity 91%, specificity 84%.</li>
+        <li><b>Limits:</b> pilot trained on one cell line, one microscope, ~10× phase contrast. Retrain on your own images
+          (e.g. MSC vs fibroblast) before research use. Not for clinical use.</li>
+      </ul>
+      <img class="fig" src="results.png" alt="Validation results">
+      <p class="muted">Code: <a href="https://github.com/shahdalqawasmi1-ui/Cell_Classifier" target="_blank">github.com/shahdalqawasmi1-ui/Cell_Classifier</a></p>
+    </div>
+  </section>
+</main>
+
+<script>
+const EXAMPLES = ["examples/differentiated_1.jpg","examples/undifferentiated_1.jpg","examples/differentiated_2.jpg","examples/undifferentiated_2.jpg"];
+let session = null, head = null;
+const $ = id => document.getElementById(id);
+
+// ---------- tabs ----------
+document.querySelectorAll(".tab").forEach(b => b.onclick = () => {
+  document.querySelectorAll(".tab").forEach(x => x.classList.toggle("on", x === b));
+  document.querySelectorAll(".pane").forEach(p => p.classList.toggle("on", p.id === b.dataset.t));
+});
+
+// ---------- model ----------
+async function loadModel() {
+  ort.env.wasm.wasmPaths = "https://cdn.jsdelivr.net/npm/onnxruntime-web@1.20.1/dist/";
+  ort.env.wasm.numThreads = self.crossOriginIsolated ? Math.min(4, navigator.hardwareConcurrency || 1) : 1;
+  head = await (await fetch("model/head.json")).json();
+  session = await ort.InferenceSession.create("model/backbone.onnx", { executionProviders: ["wasm"] });
+  $("status1").textContent = "Model ready ✓";
+}
+
+// ---------- image decoding -> float gray ----------
+async function decode(file) {
+  const name = (file.name || "").toLowerCase();
+  if (name.endsWith(".tif") || name.endsWith(".tiff")) {
+    const buf = await file.arrayBuffer();
+    const ifds = UTIF.decode(buf); const ifd = ifds[0]; UTIF.decodeImage(buf, ifd);
+    const W = ifd.width, H = ifd.height, n = W * H;
+    const bps = ifd["t258"] ? ifd["t258"][0] : 8, spp = ifd["t277"] ? ifd["t277"][0] : 1;
+    const g = new Float32Array(n);
+    if (bps === 16) {
+      const le = ifd.isLE !== undefined ? ifd.isLE : (new Uint8Array(buf)[0] === 0x49);
+      const dv = new DataView(ifd.data.buffer, ifd.data.byteOffset, ifd.data.byteLength);
+      const c = Math.min(spp, 3);
+      for (let i = 0; i < n; i++) { let s = 0; for (let k = 0; k < c; k++) s += dv.getUint16((i * spp + k) * 2, le); g[i] = s / c; }
+    } else {
+      const rgba = UTIF.toRGBA8(ifd);
+      for (let i = 0; i < n; i++) g[i] = (rgba[4*i] + rgba[4*i+1] + rgba[4*i+2]) / 3;
+    }
+    return { g, W, H };
+  }
+  const bmp = await createImageBitmap(file);
+  const c = new OffscreenCanvas(bmp.width, bmp.height), ctx = c.getContext("2d");
+  ctx.drawImage(bmp, 0, 0);
+  const d = ctx.getImageData(0, 0, bmp.width, bmp.height).data, n = bmp.width * bmp.height, g = new Float32Array(n);
+  let gray = true;
+  for (let i = 0; i < n; i += 997) if (d[4*i] !== d[4*i+1] || d[4*i] !== d[4*i+2]) { gray = false; break; }
+  for (let i = 0; i < n; i++) g[i] = gray ? d[4*i] : (d[4*i] + d[4*i+1] + d[4*i+2]) / 3;
+  return { g, W: bmp.width, H: bmp.height };
+}
+
+function percentile(sorted, q) {               // numpy 'linear'
+  const pos = q / 100 * (sorted.length - 1), lo = Math.floor(pos), hi = Math.ceil(pos);
+  return sorted[lo] + (sorted[hi] - sorted[lo]) * (pos - lo);
+}
+function stretch({ g, W, H }) {                 // -> Uint8 gray, same as python load_gray
+  const s = Float32Array.from(g).sort();
+  const lo = percentile(s, 0.5), hi = percentile(s, 99.5), out = new Uint8Array(g.length), den = hi - lo + 1e-6;
+  for (let i = 0; i < g.length; i++) { let v = (g[i] - lo) / den; v = v < 0 ? 0 : v > 1 ? 1 : v; out[i] = Math.floor(v * 255); }
+  return { u8: out, W, H };
+}
+
+// ---------- PIL-compatible bilinear (antialiased) resize ----------
+function coeffs(inSize, outSize) {
+  const scale = inSize / outSize, fs = Math.max(scale, 1), support = 1.0 * fs, ws = [];
+  for (let i = 0; i < outSize; i++) {
+    const center = (i + 0.5) * scale;
+    const xmin = Math.max(Math.trunc(center - support + 0.5), 0), xmax = Math.min(Math.trunc(center + support + 0.5), inSize);
+    const w = []; let tot = 0;
+    for (let x = xmin; x < xmax; x++) { const t = Math.abs((x - center + 0.5) / fs); const v = t < 1 ? 1 - t : 0; w.push(v); tot += v; }
+    ws.push({ xmin, w: w.map(v => tot ? v / tot : 0) });
+  }
+  return ws;
+}
+let CO = null;
+function resizeTile(u8, W, x0, y0, T, O) {
+  if (!CO || CO.T !== T || CO.O !== O) CO = { T, O, c: coeffs(T, O) };
+  const tmp = new Uint8Array(T * O), out = new Float32Array(O * O);
+  for (let y = 0; y < T; y++) {               // horizontal pass
+    const row = (y0 + y) * W + x0;
+    for (let i = 0; i < O; i++) { const { xmin, w } = CO.c[i]; let s = 0; for (let k = 0; k < w.length; k++) s += u8[row + xmin + k] * w[k]; tmp[y * O + i] = Math.min(255, Math.max(0, Math.round(s))); }
+  }
+  for (let j = 0; j < O; j++) {               // vertical pass
+    const { xmin, w } = CO.c[j];
+    for (let i = 0; i < O; i++) { let s = 0; for (let k = 0; k < w.length; k++) s += tmp[(xmin + k) * O + i] * w[k]; out[j * O + i] = Math.min(255, Math.max(0, Math.round(s))) / 255; }
+  }
+  return out;
+}
+
+// ---------- prediction ----------
+async function predict(file, onProgress) {
+  const img = stretch(await decode(file));
+  const { u8, W, H } = img, T = Math.min(head.tile, W, H), O = head.inp;
+  const ys = [], xs = [];
+  for (let y = 0; y + T <= H; y += T) ys.push(y);
+  for (let x = 0; x + T <= W; x += T) xs.push(x);
+  const probs = [], plane = O * O;
+  let done = 0, total = ys.length * xs.length;
+  for (const y of ys) for (const x of xs) {
+    const t = resizeTile(u8, W, x, y, T, O);
+    const inp = new Float32Array(2 * 3 * plane);
+    for (let c = 0; c < 3; c++) {
+      const m = head.norm_mean[c], sd = head.norm_std[c];
+      for (let r = 0; r < O; r++) for (let q = 0; q < O; q++) {
+        const v = (t[r * O + q] - m) / sd;
+        inp[c * plane + r * O + q] = v;                       // original
+        inp[3 * plane + c * plane + r * O + (O - 1 - q)] = v; // horizontal flip
+      }
+    }
+    const res = await session.run({ x: new ort.Tensor("float32", inp, [2, 3, O, O]) });
+    const f = res.f.data, D = f.length / 2;
+    let z = head.intercept;
+    for (let k = 0; k < D; k++) z += (((f[k] + f[D + k]) / 2 - head.mean[k]) / head.scale[k]) * head.coef[k];
+    probs.push(1 / (1 + Math.exp(-z)));
+    onProgress && onProgress(++done, total);
+  }
+  const p = probs.reduce((a, b) => a + b, 0) / probs.length;
+  return { p, label: head.classes[p >= 0.5 ? 1 : 0], probs, ys, xs, T, img };
+}
+
+function drawHeat(r) {
+  const { u8, W, H } = r.img, cv = $("heat"), sc = Math.min(1, 1100 / W);
+  cv.width = Math.round(W * sc); cv.height = Math.round(H * sc);
+  const full = new OffscreenCanvas(W, H), fctx = full.getContext("2d"), id = fctx.createImageData(W, H);
+  for (let i = 0; i < u8.length; i++) { id.data[4*i] = id.data[4*i+1] = id.data[4*i+2] = u8[i]; id.data[4*i+3] = 255; }
+  fctx.putImageData(id, 0, 0);
+  const ctx = cv.getContext("2d"); ctx.drawImage(full, 0, 0, cv.width, cv.height);
+  let k = 0;
+  for (const y of r.ys) for (const x of r.xs) {
+    const p = r.probs[k++], R = Math.round(29 + (194 - 29) * p), G = Math.round(78 + (65 - 78) * p), B = Math.round(216 + (12 - 216) * p);
+    ctx.fillStyle = `rgba(${R},${G},${B},0.38)`; ctx.fillRect(x * sc, y * sc, r.T * sc, r.T * sc);
+    ctx.strokeStyle = "rgba(255,255,255,.5)"; ctx.strokeRect(x * sc, y * sc, r.T * sc, r.T * sc);
+  }
+}
+
+async function runSingle(file) {
+  if (!session) { $("status1").textContent = "Model still loading, please wait…"; await modelReady; }
+  $("status1").textContent = "Analysing…";
+  const t0 = performance.now();
+  const r = await predict(file, (d, t) => $("status1").textContent = `Analysing tile ${d}/${t}…`);
+  window.lastResult = r;
+  $("resultCard").style.display = "block";
+  $("lbl").textContent = r.label;
+  $("lbl").style.color = r.p >= 0.5 ? "var(--red)" : "var(--blue)";
+  $("barfill").style.width = (r.p * 100).toFixed(1) + "%";
+  const conf = Math.max(r.p, 1 - r.p);
+  $("pline").textContent = `P(differentiated) = ${r.p.toFixed(2)} · confidence ${(conf * 100).toFixed(0)}%`;
+  $("warn").innerHTML = conf < 0.65 ? '<div class="warn">Low confidence: the image looks intermediate (e.g. partial or early differentiation).</div>' : "";
+  drawHeat(r);
+  $("status1").textContent = `Done in ${((performance.now() - t0) / 1000).toFixed(1)} s`;
+}
+
+// ---------- UI wiring ----------
+function wireDrop(dropId, inputId, handler) {
+  const d = $(dropId), inp = $(inputId);
+  d.onclick = () => inp.click();
+  inp.onchange = () => inp.files.length && handler([...inp.files]);
+  d.ondragover = e => { e.preventDefault(); d.classList.add("hover"); };
+  d.ondragleave = () => d.classList.remove("hover");
+  d.ondrop = e => { e.preventDefault(); d.classList.remove("hover"); handler([...e.dataTransfer.files]); };
+}
+wireDrop("drop1", "file1", fs => runSingle(fs[0]));
+
+let rows = [];
+wireDrop("drop2", "file2", async fs => {
+  if (!session) await modelReady;
+  rows = []; const tb = $("tbl").querySelector("tbody"); tb.innerHTML = ""; $("tbl").style.display = "table";
+  for (let i = 0; i < fs.length; i++) {
+    $("status2").textContent = `Image ${i + 1}/${fs.length}: ${fs[i].name}`;
+    const r = await predict(fs[i]);
+    rows.push([fs[i].name, r.label, r.p.toFixed(3)]);
+    tb.insertAdjacentHTML("beforeend", `<tr><td>${fs[i].name.replace(/</g, "&lt;")}</td><td>${r.label}</td><td>${r.p.toFixed(3)}</td></tr>`);
+  }
+  $("status2").textContent = `Done: ${fs.length} images`; $("csv").style.display = "inline-block";
+});
+$("csv").onclick = () => {
+  const csv = "file,prediction,p_differentiated\n" + rows.map(r => r.map(v => `"${v}"`).join(",")).join("\n");
+  const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([csv], { type: "text/csv" })); a.download = "predictions.csv"; a.click();
+};
+
+EXAMPLES.forEach(src => {
+  const im = document.createElement("img"); im.src = src; im.title = "Click to analyse";
+  im.onclick = async () => { const b = await (await fetch(src)).blob(); runSingle(new File([b], src.split("/").pop(), { type: b.type })); };
+  $("examples").appendChild(im);
+});
+
+const modelReady = loadModel().catch(e => { $("status1").textContent = "Model failed to load: " + e; });
+</script>
+</body>
+</html>
