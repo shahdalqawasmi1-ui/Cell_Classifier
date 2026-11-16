@@ -1,0 +1,230 @@
+image_name,group,first_differentiating_agent,first_agent_concentration(micromolar),FBS_percentage,phorbol_ester,y,prob
+25.07-Kolonka2.tif,Exp 25-Jul,,0.0,10.0,False,0,0.19464750587940216
+25.07-Kolonka3.tif,Exp 25-Jul,,0.0,10.0,False,0,0.3740447461605072
+25.07-Kolonka4.tif,Exp 25-Jul,,0.0,10.0,False,0,0.09770448505878448
+25.07-Kolonka5.tif,Exp 25-Jul,,0.0,10.0,False,0,0.173164501786232
+25.07-Kolonka6.tif,Exp 25-Jul,,0.0,10.0,False,0,0.32516196370124817
+25.07-Kolonka7.tif,Exp 25-Jul,,0.0,10.0,False,0,0.21261848509311676
+25.07-Kolonka8.tif,Exp 25-Jul,,0.0,10.0,False,0,0.17666859924793243
+25.07_MTT-SMQNAnaSR_RoS_RA-Plaka1-Plaka_1_RA-2.5_qmka1_SN1.tif,Exp 25-Jul,RetAc,2.5,10.0,False,1,0.553541362285614
+25.07_MTT-SMQNAnaSR_RoS_RA-Plaka1-Plaka_1_RA-2.5_qmka1_SN2.tif,Exp 25-Jul,RetAc,2.5,10.0,False,1,0.6535326242446899
+25.07_MTT-SMQNAnaSR_RoS_RA-Plaka1-Plaka_1_RA-2.5_qmka1_SN3.tif,Exp 25-Jul,RetAc,2.5,10.0,False,1,0.5352542996406555
+25.07_MTT-SMQNAnaSR_RoS_RA-Plaka1-Plaka_1_RA-5_qmka1_SN1.tif,Exp 25-Jul,RetAc,5.0,10.0,False,1,0.6028497219085693
+25.07_MTT-SMQNAnaSR_RoS_RA-Plaka1-Plaka_1_RA-5_qmka1_SN2.tif,Exp 25-Jul,RetAc,5.0,10.0,False,1,0.563429057598114
+25.07_MTT-SMQNAnaSR_RoS_RA-Plaka1-Plaka_1_RA-5_qmka2_SN1.tif,Exp 25-Jul,RetAc,5.0,10.0,False,1,0.40188777446746826
+25.07_MTT-SMQNAnaSR_RoS_RA-Plaka1-Plaka_1_RA-5_qmka2_SN2.tif,Exp 25-Jul,RetAc,5.0,10.0,False,1,0.5716258883476257
+25.07_MTT-SMQNAnaSR_RoS_RA-Plaka1-Plaka_1_RA-5_qmka2_SN3.tif,Exp 25-Jul,RetAc,5.0,10.0,False,1,0.42616477608680725
+25.07_MTT-SMQNAnaSR_RoS_RA-Plaka1-Plaka_1_RA-10_1SN.tif,Exp 25-Jul,RetAc,10.0,10.0,False,1,0.5115241408348083
+25.07_MTT-SMQNAnaSR_RoS_RA-Plaka1-Plaka_1_RA-10_2SN.tif,Exp 25-Jul,RetAc,10.0,10.0,False,1,0.6114110946655273
+25.07_MTT-SMQNAnaSR_RoS_RA-Plaka1-Plaka_1_RA-10_3SN.tif,Exp 25-Jul,RetAc,10.0,10.0,False,1,0.5500786900520325
+25.07_MTT-SMQNAnaSR_RoS_RA-Plaka1-Plaka_1_RA-10_qmka2_SN1.tif,Exp 25-Jul,RetAc,10.0,10.0,False,1,0.8764849901199341
+25.07_MTT-SMQNAnaSR_RoS_RA-Plaka1-Plaka_1_RA-10_qmka2_SN2.tif,Exp 25-Jul,RetAc,10.0,10.0,False,1,0.829351544380188
+25.07_MTT-SMQNAnaSR_RoS_RA-Plaka2-Kontrl1.tif,Exp 25-Jul,,0.0,10.0,False,0,0.2753000259399414
+25.07_MTT-SMQNAnaSR_RoS_RA-Plaka2-Kontrl2.tif,Exp 25-Jul,,0.0,10.0,False,0,0.03945833817124367
+25.07_MTT-SMQNAnaSR_RoS_RA-Plaka2-RA-2.5_qmka1_SN1.tif,Exp 25-Jul,RetAc,2.5,10.0,False,1,0.7314528822898865
+25.07_MTT-SMQNAnaSR_RoS_RA-Plaka2-RA-2.5_qmka1_SN2.tif,Exp 25-Jul,RetAc,2.5,10.0,False,1,0.5290868878364563
+25.07_MTT-SMQNAnaSR_RoS_RA-Plaka2-RA-5_qmka1_SN1.tif,Exp 25-Jul,RetAc,5.0,10.0,False,1,0.60105299949646
+25.07_MTT-SMQNAnaSR_RoS_RA-Plaka2-RA-5_qmka2_SN1.tif,Exp 25-Jul,RetAc,5.0,10.0,False,1,0.7374595403671265
+25.07_MTT-SMQNAnaSR_RoS_RA-Plaka2-RA-5_qmka2_SN2.tif,Exp 25-Jul,RetAc,5.0,10.0,False,1,0.3843403458595276
+25.07_MTT-SMQNAnaSR_RoS_RA-Plaka2-RA-10_qmka1_SN1.tif,Exp 25-Jul,RetAc,10.0,10.0,False,1,0.6103895902633667
+25.07_MTT-SMQNAnaSR_RoS_RA-Plaka2-RA-10_qmka1_SN2.tif,Exp 25-Jul,RetAc,10.0,10.0,False,1,0.9123726487159729
+25.07_MTT-SMQNAnaSR_RoS_RA-Plaka2-RA-10_qmka2_SN1.tif,Exp 25-Jul,RetAc,10.0,10.0,False,1,0.8814462423324585
+25.07_MTT-SMQNAnaSR_RoS_RA-Plaka2-RA-10_qmka2_SN2.tif,Exp 25-Jul,RetAc,10.0,10.0,False,1,0.834455668926239
+25.07_MTT-SMQNAnaSR_RoS_RA-Plaka3-kontr1.tif,Exp 25-Jul,,0.0,10.0,False,0,0.0077789356000721455
+25.07_MTT-SMQNAnaSR_RoS_RA-Plaka3-kontr.tif,Exp 25-Jul,,0.0,10.0,False,0,0.08061287552118301
+25.07_MTT-SMQNAnaSR_RoS_RA-Plaka3-ra-1-qmka1-sn1.tif,Exp 25-Jul,RetAc,1.0,10.0,False,1,0.017105231061577797
+25.07_MTT-SMQNAnaSR_RoS_RA-Plaka3-ra-1-qmka2-sn1.tif,Exp 25-Jul,RetAc,1.0,10.0,False,1,0.17965513467788696
+25.07_MTT-SMQNAnaSR_RoS_RA-plaka4-kontr1.tif,Exp 25-Jul,,0.0,10.0,False,0,0.007703368552029133
+25.07_MTT-SMQNAnaSR_RoS_RA-plaka4-kontr2.tif,Exp 25-Jul,,0.0,10.0,False,0,0.050367321819067
+25.07_MTT-SMQNAnaSR_RoS_RA-plaka4-1RA-1qmka.tif,Exp 25-Jul,RetAc,1.0,10.0,False,1,0.5451472997665405
+25.07_MTT-SMQNAnaSR_RoS_RA-plaka4-1RA-2qmka.tif,Exp 25-Jul,RetAc,1.0,10.0,False,1,0.18676015734672546
+25.07_MTT-SMQNAnaSR_RoS_RA-plaka4-1RA-3qmka.tif,Exp 25-Jul,RetAc,1.0,10.0,False,1,0.05785178393125534
+28.07- ne ST_Mtt-kontrl2_2.tif,Exp 28-Jul,,0.0,10.0,False,0,0.39815810322761536
+28.07- ne ST_Mtt-kontrl2.tif,Exp 28-Jul,,0.0,10.0,False,0,0.0747738629579544
+28.07- ne ST_Mtt-kontrl3.tif,Exp 28-Jul,,0.0,10.0,False,0,0.24808369576931
+28.07- ne ST_Mtt-plaka1-kontrol1_sn2.tif,Exp 28-Jul,,0.0,10.0,False,0,0.23943829536437988
+28.07- ne ST_Mtt-plaka1-kontrol1.tif,Exp 28-Jul,,0.0,10.0,False,0,0.5404102206230164
+28.07- ne ST_Mtt-plaka1-kontrol2_sn1.tif,Exp 28-Jul,,0.0,10.0,False,0,0.386884868144989
+28.07- ne ST_Mtt-plaka1-kontrol2_sn2.tif,Exp 28-Jul,,0.0,10.0,False,0,0.2412758618593216
+28.07- ne ST_Mtt-plaka1-RA-2.5-qmka1_SN1.tif,Exp 28-Jul,RetAc,2.5,10.0,False,1,0.801334023475647
+28.07- ne ST_Mtt-plaka1-RA-2.5-qmka1_SN2.tif,Exp 28-Jul,RetAc,2.5,10.0,False,1,0.626319169998169
+28.07- ne ST_Mtt-plaka1-RA-5-qmka1_SN1.tif,Exp 28-Jul,RetAc,5.0,10.0,False,1,0.9818822145462036
+28.07- ne ST_Mtt-plaka1-RA-5-qmka1_SN2.tif,Exp 28-Jul,RetAc,5.0,10.0,False,1,0.9441643953323364
+28.07- ne ST_Mtt-plaka1-RA-5-qmka2_SN1.tif,Exp 28-Jul,RetAc,5.0,10.0,False,1,0.8511389493942261
+28.07- ne ST_Mtt-plaka1-RA-5-qmka2_SN2.tif,Exp 28-Jul,RetAc,5.0,10.0,False,1,0.8886898159980774
+28.07- ne ST_Mtt-plaka1-RA-10-qmka1_SN1.tif,Exp 28-Jul,RetAc,10.0,10.0,False,1,0.9397168755531311
+28.07- ne ST_Mtt-plaka1-RA-10-qmka1_SN2.tif,Exp 28-Jul,RetAc,10.0,10.0,False,1,0.9839627146720886
+28.07- ne ST_Mtt-plaka1-RA-10-qmka2_SN1.tif,Exp 28-Jul,RetAc,10.0,10.0,False,1,0.9061251878738403
+28.07- ne ST_Mtt-plaka1-RA-10-qmka2_SN2.tif,Exp 28-Jul,RetAc,10.0,10.0,False,1,0.5582202076911926
+28.07- ne ST_Mtt-plaka2-RA-2.5-1qmka_sn1.tif,Exp 28-Jul,RetAc,2.5,10.0,False,1,0.7543196082115173
+28.07- ne ST_Mtt-plaka2-RA-5-1qmka_sn1.tif,Exp 28-Jul,RetAc,5.0,10.0,False,1,0.5137036442756653
+28.07- ne ST_Mtt-plaka2-RA-5-1qmka_sn2.tif,Exp 28-Jul,RetAc,5.0,10.0,False,1,0.7143704295158386
+28.07- ne ST_Mtt-plaka2-RA-5-2qmka_sn1.tif,Exp 28-Jul,RetAc,5.0,10.0,False,1,0.8264309167861938
+28.07- ne ST_Mtt-plaka2-RA-5-2qmka_sn2.tif,Exp 28-Jul,RetAc,5.0,10.0,False,1,0.7544721961021423
+28.07- ne ST_Mtt-plaka2-RA-5-2qmka_sn3.tif,Exp 28-Jul,RetAc,5.0,10.0,False,1,0.8625457882881165
+28.07- ne ST_Mtt-plaka2-RA-10-1qmka_sn1.tif,Exp 28-Jul,RetAc,10.0,10.0,False,1,0.753283679485321
+28.07- ne ST_Mtt-plaka2-RA-10-1qmka_sn2.tif,Exp 28-Jul,RetAc,10.0,10.0,False,1,0.7747495770454407
+28.07- ne ST_Mtt-plaka2-RA-10-1qmka_sn3.tif,Exp 28-Jul,RetAc,10.0,10.0,False,1,0.8670843839645386
+28.07- ne ST_Mtt-plaka2-RA-10-2qmka_sn1.tif,Exp 28-Jul,RetAc,10.0,10.0,False,1,0.7887702584266663
+28.07- ne ST_Mtt-plaka2-RA-10-2qmka_sn2.tif,Exp 28-Jul,RetAc,10.0,10.0,False,1,0.9124103784561157
+28.07- ne ST_Mtt-plaka3-kontrl1_1.tif,Exp 28-Jul,,0.0,10.0,False,0,0.3296750485897064
+28.07- ne ST_Mtt-plaka3-kontrl1.tif,Exp 28-Jul,,0.0,10.0,False,0,0.46043890714645386
+28.07- ne ST_Mtt-plaka3-kontrl2_2.tif,Exp 28-Jul,,0.0,10.0,False,0,0.5330987572669983
+28.07- ne ST_Mtt-plaka3-kontrl2.tif,Exp 28-Jul,,0.0,10.0,False,0,0.4052378833293915
+28.07- ne ST_Mtt-plaka3-RA-1-qmka1_sn1.tif,Exp 28-Jul,RetAc,1.0,10.0,False,1,0.7509095072746277
+28.07- ne ST_Mtt-plaka3-RA-1-qmka1_sn2.tif,Exp 28-Jul,RetAc,1.0,10.0,False,1,0.9744052290916443
+28.07- ne ST_Mtt-plaka3-RA-1-qmka2_sn1.tif,Exp 28-Jul,RetAc,1.0,10.0,False,1,0.39146748185157776
+28.07- ne ST_Mtt-plaka3-RA-1-qmka2_sn2.tif,Exp 28-Jul,RetAc,1.0,10.0,False,1,0.30716472864151
+28.07- ne ST_Mtt-plaka3-RA-2.5-qmka1_sn1.tif,Exp 28-Jul,RetAc,2.5,10.0,False,1,0.8257415294647217
+28.07- ne ST_Mtt-plaka3-RA-2.5-qmka1_sn2.tif,Exp 28-Jul,RetAc,2.5,10.0,False,1,0.8991631269454956
+28.07- ne ST_Mtt-plaka3-RA-2.5-qmka2_sn1.tif,Exp 28-Jul,RetAc,2.5,10.0,False,1,0.699854850769043
+28.07- ne ST_Mtt-plaka3-RA-2.5-qmka2_sn2.tif,Exp 28-Jul,RetAc,2.5,10.0,False,1,0.7721167802810669
+28.07- ne ST_Mtt-plaka3-RA-2.5-qmka2_sn3.tif,Exp 28-Jul,RetAc,2.5,10.0,False,1,0.8560282588005066
+28.07- ne ST_Mtt-plaka4-RA1-qmka1_sn1.tif,Exp 28-Jul,RetAc,1.0,10.0,False,1,0.6766844987869263
+28.07- ne ST_Mtt-plaka4-RA1-qmka1_sn2.tif,Exp 28-Jul,RetAc,1.0,10.0,False,1,0.8502381443977356
+28.07- ne ST_Mtt-plaka4-RA1-qmka2_sn1.tif,Exp 28-Jul,RetAc,1.0,10.0,False,1,0.5487641096115112
+28.07- ne ST_Mtt-plaka4-RA1-qmka2_sn2.tif,Exp 28-Jul,RetAc,1.0,10.0,False,1,0.7919012308120728
+28.07- ne ST_Mtt-plaka4-RA1-qmka3_sn1.tif,Exp 28-Jul,RetAc,1.0,10.0,False,1,0.5680299401283264
+28.07- ne ST_Mtt-plaka4-RA1-qmka3_sn2.tif,Exp 28-Jul,RetAc,1.0,10.0,False,1,0.7491451501846313
+1.08-smqna_na_sredite-fbs-3x10^5-0.5x10^5-0.63%_SN5.tif,Exp 01-Aug,,0.0,10.0,False,0,0.3897266387939453
+1.08-smqna_na_sredite-fbs-3x10^5-0.5x10^5-10%_SN1.tif,Exp 01-Aug,,0.0,10.0,False,0,0.3225525915622711
+1.08-smqna_na_sredite-fbs-3x10^5-0.5x10^5-10%_SN2.tif,Exp 01-Aug,,0.0,10.0,False,0,0.25946521759033203
+1.08-smqna_na_sredite-fbs-3x10^5-0.5x10^5-10%_SN3.tif,Exp 01-Aug,,0.0,10.0,False,0,0.46615976095199585
+1.08-smqna_na_sredite-fbs-3x10^5-0.5x10^5-10%_SN4.tif,Exp 01-Aug,,0.0,10.0,False,0,0.3470804989337921
+1.08-smqna_na_sredite-fbs-3x10^5-0.5x10^5-10%_SN5.tif,Exp 01-Aug,,0.0,10.0,False,0,0.3088737428188324
+1.08-smqna_na_sredite-fbs-3x10^5-0.5x10^5-10%_SN6.tif,Exp 01-Aug,,0.0,10.0,False,0,0.3338925242424011
+1.08-smqna_na_sredite-fbs-3x10^5-10%+5%-0.63%_Sn9.tif,Exp 01-Aug,,0.0,10.0,False,0,0.580062747001648
+1.08-smqna_na_sredite-fbs-3x10^5-10%+5%-10%_Sn1.tif,Exp 01-Aug,,0.0,10.0,False,0,0.1997038573026657
+1.08-smqna_na_sredite-fbs-3x10^5-10%+5%-10%_Sn2.tif,Exp 01-Aug,,0.0,10.0,False,0,0.4240054488182068
+1.08-smqna_na_sredite-fbs-3x10^5-10%+5%-10%_Sn3.tif,Exp 01-Aug,,0.0,10.0,False,0,0.3770756125450134
+1.08-smqna_na_sredite-fbs-3x10^5-10%+5%-10%_Sn4.tif,Exp 01-Aug,,0.0,10.0,False,0,0.5027719736099243
+1.08-smqna_na_sredite-fbs-3x10^5-10%+5%-10%_Sn5.tif,Exp 01-Aug,,0.0,10.0,False,0,0.5592348575592041
+1.08-smqna_na_sredite-fbs-3x10^5-10%+5%-10%_Sn6.tif,Exp 01-Aug,,0.0,10.0,False,0,0.3091978430747986
+1.08-smqna_na_sredite-fbs-3x10^5-10%+5%-10%_Sn7.tif,Exp 01-Aug,,0.0,10.0,False,0,0.488980770111084
+1.08-smqna_na_sredite-Jiznenost_Roz-Plaka2_kontrol1.tif,Exp 01-Aug,,0.0,1.0,False,0,0.24689333140850067
+1.08-smqna_na_sredite-Jiznenost_Roz-Plaka2_kontrol2.tif,Exp 01-Aug,,0.0,1.0,False,0,0.7087157964706421
+1.08-smqna_na_sredite-Jiznenost_Roz-Plaka2_kontrol3.tif,Exp 01-Aug,,0.0,1.0,False,0,0.2961397171020508
+1.08-smqna_na_sredite-Jiznenost_Roz-Plaka2_kontrol4.tif,Exp 01-Aug,,0.0,1.0,False,0,0.11816065013408661
+1.08-smqna_na_sredite-Jiznenost_Roz-plaka3_kontrl1.tif,Exp 01-Aug,,0.0,1.0,False,0,0.12099459022283554
+1.08-smqna_na_sredite-Jiznenost_Roz-plaka3_kontrl2.tif,Exp 01-Aug,,0.0,1.0,False,0,0.4738594889640808
+1.08-smqna_na_sredite-Jiznenost_Roz-plaka3_kontrl3.tif,Exp 01-Aug,,0.0,1.0,False,0,0.5134947299957275
+1.08-smqna_na_sredite-Jiznenost_Roz-plaka3_kontrl4.tif,Exp 01-Aug,,0.0,1.0,False,0,0.23266558349132538
+1.08-smqna_na_sredite-RA+Roz-0.5x10^5-10 Roz+RA-kontrol1.tif,Exp 01-Aug,,0.0,1.0,False,0,0.14675840735435486
+1.08-smqna_na_sredite-RA+Roz-0.5x10^5-10 Roz+RA-kontrol2.tif,Exp 01-Aug,,0.0,1.0,False,0,0.3296523988246918
+1.08-smqna_na_sredite-RA+Roz-0.5x10^5-10 Roz+RA-kontrol3.tif,Exp 01-Aug,,0.0,1.0,False,0,0.33664146065711975
+1.08-smqna_na_sredite-RA+Roz-0.5x10^5-10 Roz+RA-RA-RA_10_qmka2_sn1.tif,Exp 01-Aug,RetAc,10.0,1.0,False,1,0.8610464930534363
+1.08-smqna_na_sredite-RA+Roz-0.5x10^5-10 Roz+RA-RA-RA_10_qmka2_sn2.tif,Exp 01-Aug,RetAc,10.0,1.0,False,1,0.8932734131813049
+1.08-smqna_na_sredite-RA+Roz-0.5x10^5-10 Roz+RA-RA-RA_10_qmka3_sn2.tif,Exp 01-Aug,RetAc,10.0,1.0,False,1,0.8425735235214233
+1.08-smqna_na_sredite-RA+Roz-0.5x10^5-10 Roz+RA-RA-RA_10_qmka3_sn3.tif,Exp 01-Aug,RetAc,10.0,1.0,False,1,0.8253992199897766
+1.08-smqna_na_sredite-RA+Roz-0.5x10^5-10 Roz+RA-RA-RA_10_qmka3_sn4.tif,Exp 01-Aug,RetAc,10.0,1.0,False,1,0.6724947690963745
+1.08-smqna_na_sredite-RA+Roz-0.5x10^5-10 Roz+RA-RA-RA_10_qmka3_sn5.tif,Exp 01-Aug,RetAc,10.0,1.0,False,1,0.7453519701957703
+1.08-smqna_na_sredite-RA+Roz-0.5x10^5-10 Roz+RA-RA-RA_10_qmka3.tif,Exp 01-Aug,RetAc,10.0,1.0,False,1,0.6939106583595276
+1.08-smqna_na_sredite-RA+Roz-0.5x10^5-10 Roz+RA-RA-RA_10_qmka4_sn1.tif,Exp 01-Aug,RetAc,10.0,1.0,False,1,0.708336591720581
+1.08-smqna_na_sredite-RA+Roz-0.5x10^5-10 Roz+RA-RA-RA_10_qmka4_sn2.tif,Exp 01-Aug,RetAc,10.0,1.0,False,1,0.8128776550292969
+1.08-smqna_na_sredite-RA+Roz-0.5x10^5-10 Roz+RA-RA-RA_10_qmka4_sn3.tif,Exp 01-Aug,RetAc,10.0,1.0,False,1,0.5566022992134094
+1.08-smqna_na_sredite-RA+Roz-0.5x10^5-1ra+1roz-kontrl1.tif,Exp 01-Aug,,0.0,1.0,False,0,0.13339760899543762
+1.08-smqna_na_sredite-RA+Roz-0.5x10^5-1ra+1roz-kontrl2.tif,Exp 01-Aug,,0.0,1.0,False,0,0.22482866048812866
+1.08-smqna_na_sredite-RA+Roz-0.5x10^5-1ra+1roz-kontrl3.tif,Exp 01-Aug,,0.0,1.0,False,0,0.3677213788032532
+1.08-smqna_na_sredite-RA+Roz-0.5x10^5-1ra+1roz-kontrl4.tif,Exp 01-Aug,,0.0,1.0,False,0,0.26933616399765015
+1.08-smqna_na_sredite-RA+Roz-0.5x10^5-1ra+1roz-ra-RA_1_qmka1_sn2.tif,Exp 01-Aug,RetAc,1.0,1.0,False,1,0.744369626045227
+1.08-smqna_na_sredite-RA+Roz-0.5x10^5-1ra+1roz-ra-RA_1_qmka1_sn3.tif,Exp 01-Aug,RetAc,1.0,1.0,False,1,0.771648645401001
+1.08-smqna_na_sredite-RA+Roz-0.5x10^5-1ra+1roz-ra-RA_1_qmka1_sn4.tif,Exp 01-Aug,RetAc,1.0,1.0,False,1,0.6925723552703857
+1.08-smqna_na_sredite-RA+Roz-0.5x10^5-1ra+1roz-ra-RA_1_qmka1.tif,Exp 01-Aug,RetAc,1.0,1.0,False,1,0.6977818608283997
+1.08-smqna_na_sredite-RA+Roz-0.5x10^5-1ra+1roz-ra-RA_1_qmka4_sn1.tif,Exp 01-Aug,RetAc,1.0,1.0,False,1,0.6741905212402344
+1.08-smqna_na_sredite-RA+Roz-0.5x10^5-1ra+1roz-ra-RA_1_qmka4_sn2.tif,Exp 01-Aug,RetAc,1.0,1.0,False,1,0.6293747425079346
+1.08-smqna_na_sredite-RA+Roz-0.5x10^5-1ra+1roz-ra-RA_1_qmka4_sn3.tif,Exp 01-Aug,RetAc,1.0,1.0,False,1,0.7697924971580505
+1.08-smqna_na_sredite-RA+Roz-1ra+1roz-kontrl1.tif,Exp 01-Aug,,0.0,1.0,False,0,0.4830823242664337
+1.08-smqna_na_sredite-RA+Roz-1ra+1roz-kontrl2.tif,Exp 01-Aug,,0.0,1.0,False,0,0.2378108948469162
+1.08-smqna_na_sredite-RA+Roz-1ra+1roz-kontrl3.tif,Exp 01-Aug,,0.0,1.0,False,0,0.24363607168197632
+1.08-smqna_na_sredite-RA+Roz-1ra+1roz-RA_1-Ra1_qmka1_sn1.tif,Exp 01-Aug,RetAc,1.0,1.0,False,1,0.8844884037971497
+1.08-smqna_na_sredite-RA+Roz-1ra+1roz-RA_1-Ra1_qmka1_sn2.tif,Exp 01-Aug,RetAc,1.0,1.0,False,1,0.839322030544281
+1.08-smqna_na_sredite-RA+Roz-1ra+1roz-RA_1-Ra1_qmka1_sn3.tif,Exp 01-Aug,RetAc,1.0,1.0,False,1,0.6841714382171631
+1.08-smqna_na_sredite-RA+Roz-1ra+1roz-RA_1-Ra1_qmka1_sn4.tif,Exp 01-Aug,RetAc,1.0,1.0,False,1,0.9055951237678528
+1.08-smqna_na_sredite-RA+Roz-1ra+1roz-RA_1-Ra1_qmka1_sn5.tif,Exp 01-Aug,RetAc,1.0,1.0,False,1,0.7519987225532532
+1.08-smqna_na_sredite-RA+Roz-1ra+1roz-RA_1-Ra1_qmka2_sn1.tif,Exp 01-Aug,RetAc,1.0,1.0,False,1,0.7349844574928284
+1.08-smqna_na_sredite-RA+Roz-1ra+1roz-RA_1-Ra1_qmka2_sn2.tif,Exp 01-Aug,RetAc,1.0,1.0,False,1,0.8424517512321472
+1.08-smqna_na_sredite-RA+Roz-1ra+1roz-RA_1-Ra1_qmka2_sn3.tif,Exp 01-Aug,RetAc,1.0,1.0,False,1,0.8642675280570984
+1.08-smqna_na_sredite-RA+Roz-1ra+1roz-RA_1-Ra1_qmka3_sn1.tif,Exp 01-Aug,RetAc,1.0,1.0,False,1,0.7311211824417114
+1.08-smqna_na_sredite-RA+Roz-1ra+1roz-RA_1-Ra1_qmka3_sn2.tif,Exp 01-Aug,RetAc,1.0,1.0,False,1,0.829953134059906
+1.08-smqna_na_sredite-RA+Roz-1ra+1roz-RA_1-Ra1_qmka4_sn1.tif,Exp 01-Aug,RetAc,1.0,1.0,False,1,0.8556031584739685
+1.08-smqna_na_sredite-RA+Roz-1ra+1roz-RA_1-Ra1_qmka4_sn4.tif,Exp 01-Aug,RetAc,1.0,1.0,False,1,0.76617032289505
+1.08-smqna_na_sredite-RA+Roz-RA-10_qmka1_sn1.tif,Exp 01-Aug,RetAc,10.0,1.0,False,1,0.8966768383979797
+1.08-smqna_na_sredite-RA+Roz-RA-10_qmka1_sn2.tif,Exp 01-Aug,RetAc,10.0,1.0,False,1,0.8277509212493896
+1.08-smqna_na_sredite-RA+Roz-RA-10_qmka1_sn3.tif,Exp 01-Aug,RetAc,10.0,1.0,False,1,0.8075465559959412
+1.08-smqna_na_sredite-RA+Roz-RA-10_qmka1_sn4.tif,Exp 01-Aug,RetAc,10.0,1.0,False,1,0.8670473694801331
+1.08-smqna_na_sredite-RA+Roz-RA-10_qmka1_sn5.tif,Exp 01-Aug,RetAc,10.0,1.0,False,1,0.8430688977241516
+1.08-smqna_na_sredite-RA+Roz-RA-10_qmka2_sn1.tif,Exp 01-Aug,RetAc,10.0,1.0,False,1,0.8567942380905151
+1.08-smqna_na_sredite-RA+Roz-RA-10_qmka2_sn2.tif,Exp 01-Aug,RetAc,10.0,1.0,False,1,0.8243237733840942
+1.08-smqna_na_sredite-RA+Roz-RA-10_qmka2_sn3.tif,Exp 01-Aug,RetAc,10.0,1.0,False,1,0.9298564791679382
+1.08-smqna_na_sredite-RA+Roz-RA-10_qmka3_sn1.tif,Exp 01-Aug,RetAc,10.0,1.0,False,1,0.9617509245872498
+1.08-smqna_na_sredite-RA+Roz-RA-10_qmka3_sn2.tif,Exp 01-Aug,RetAc,10.0,1.0,False,1,0.9114775061607361
+1.08-smqna_na_sredite-RA+Roz-RA-10_qmka4_sn1.tif,Exp 01-Aug,RetAc,10.0,1.0,False,1,0.9435780048370361
+1.08-smqna_na_sredite-RA+Roz-RA-kontrl1.tif,Exp 01-Aug,,0.0,1.0,False,0,0.11006278544664383
+1.08-smqna_na_sredite-RA+Roz-RA-kontrl4.tif,Exp 01-Aug,,0.0,1.0,False,0,0.6229291558265686
+4.08-posledendenMAI-fbs-0.5x10^5-10+5-10_sn1_qmka5.tif,Exp 04-Aug,,0.0,10.0,True,0,0.3991236090660095
+4.08-posledendenMAI-fbs-0.5x10^5-10+5-10_sn1_qmka6.tif,Exp 04-Aug,,0.0,10.0,True,0,0.21209844946861267
+4.08-posledendenMAI-fbs-0.5x10^5-10+5-10_sn2_qmka6.tif,Exp 04-Aug,,0.0,10.0,True,0,0.3451533317565918
+4.08-posledendenMAI-fbs-0.5x10^5-10+5-10_sn4_qmka1.tif,Exp 04-Aug,,0.0,10.0,True,0,0.6349353194236755
+4.08-posledendenMAI-fbs-0.5x10^5-10+5-10_sn4_qmka2.tif,Exp 04-Aug,,0.0,10.0,True,0,0.4170781075954437
+4.08-posledendenMAI-fbs-3x10^5-10+5-10_qmka1_sn1.tif,Exp 04-Aug,,0.0,10.0,True,0,0.1290881633758545
+4.08-posledendenMAI-fbs-3x10^5-10+5-10_qmka1_sn2.tif,Exp 04-Aug,,0.0,10.0,True,0,0.2838303744792938
+4.08-posledendenMAI-fbs-3x10^5-10+5-10_qmka2_sn1.tif,Exp 04-Aug,,0.0,10.0,True,0,0.3227993845939636
+4.08-posledendenMAI-fbs-3x10^5-10+5-10_qmka2_sn2.tif,Exp 04-Aug,,0.0,10.0,True,0,0.29492345452308655
+4.08-posledendenMAI-fbs-3x10^5-10+5-10_qmka2_sn3.tif,Exp 04-Aug,,0.0,10.0,True,0,0.41481563448905945
+4.08-posledendenMAI-fbs-3x10^5-10+5-10_qmka4_sn1.tif,Exp 04-Aug,,0.0,10.0,True,0,0.2607804536819458
+4.08-posledendenMAI-fbs-3x10^5-10+5-10_qmka4_sn2.tif,Exp 04-Aug,,0.0,10.0,True,0,0.2638779580593109
+4.08-posledendenMAI-fbs-3x10^5-10+5-10_qmka5_sn1.tif,Exp 04-Aug,,0.0,10.0,True,0,0.43263617157936096
+4.08-posledendenMAI-fbs-3x10^5-10+5-10_qmka5_sn2.tif,Exp 04-Aug,,0.0,10.0,True,0,0.31999072432518005
+4.08-posledendenMAI-fbs-3x10^5-10+5-10_qmka5_sn3.tif,Exp 04-Aug,,0.0,10.0,True,0,0.16882607340812683
+4.08-posledendenMAI-fbs-3x10^5-10+5-10_qmka6_sn1.tif,Exp 04-Aug,,0.0,10.0,True,0,0.5423356890678406
+4.08-posledendenMAI-Roz+RA-diff-0.5x10^5-1_RA_qmka1_sn1.tif,Exp 04-Aug,RetAc,1.0,1.0,True,1,0.41351115703582764
+4.08-posledendenMAI-Roz+RA-diff-0.5x10^5-1_RA_qmka1_sn2.tif,Exp 04-Aug,RetAc,1.0,1.0,True,1,0.5596480965614319
+4.08-posledendenMAI-Roz+RA-diff-0.5x10^5-1_RA_qmka3_sn1.tif,Exp 04-Aug,RetAc,1.0,1.0,True,1,0.3311910033226013
+4.08-posledendenMAI-Roz+RA-diff-0.5x10^5-1_RA_qmka3_sn2.tif,Exp 04-Aug,RetAc,1.0,1.0,True,1,0.5259184241294861
+4.08-posledendenMAI-Roz+RA-diff-0.5x10^5-1_RA_qmka4_sn1.tif,Exp 04-Aug,RetAc,1.0,1.0,True,1,0.6873459219932556
+4.08-posledendenMAI-Roz+RA-diff-0.5x10^5-kontrl1.tif,Exp 04-Aug,,0.0,1.0,True,0,0.17007741332054138
+4.08-posledendenMAI-Roz+RA-diff-0.5x10^5-1+1-RA+Roz-RA_qmka2_sn1.tif,Exp 04-Aug,RetAc,1.0,1.0,True,1,0.8271310925483704
+4.08-posledendenMAI-Roz+RA-diff-0.5x10^5-1+1-RA+Roz-RA_qmka3_sn1.tif,Exp 04-Aug,RetAc,1.0,1.0,True,1,0.8128107786178589
+4.08-posledendenMAI-Roz+RA-diff-0.5x10^5-1+1-RA+Roz-RA_qmka3_sn2.tif,Exp 04-Aug,RetAc,1.0,1.0,True,1,0.9071177244186401
+4.08-posledendenMAI-Roz+RA-diff-0.5x10^5-1+1-RA+Roz-RA_qmka4_sn1.tif,Exp 04-Aug,RetAc,1.0,1.0,True,1,0.7026949524879456
+4.08-posledendenMAI-Roz+RA-diff-0.5x10^5-1+1-RA+Roz-kontrol1.tif,Exp 04-Aug,,0.0,1.0,True,0,0.42246565222740173
+4.08-posledendenMAI-Roz+RA-diff-0.5x10^5-1+1-RA+Roz-kontrol2.tif,Exp 04-Aug,,0.0,1.0,True,0,0.4214385449886322
+4.08-posledendenMAI-Roz+RA-diff-10-roz+RA-RA_10_qmka1_sn1.tif,Exp 04-Aug,RetAc,10.0,1.0,True,1,0.9179821014404297
+4.08-posledendenMAI-Roz+RA-diff-10-roz+RA-RA_10_qmka1_sn2.tif,Exp 04-Aug,RetAc,10.0,1.0,True,1,0.9806243777275085
+4.08-posledendenMAI-Roz+RA-diff-10-roz+RA-RA_10_qmka1_sn3.tif,Exp 04-Aug,RetAc,10.0,1.0,True,1,0.9704228043556213
+4.08-posledendenMAI-Roz+RA-diff-10-roz+RA-RA_10_qmka2_sn1.tif,Exp 04-Aug,RetAc,10.0,1.0,True,1,0.976789116859436
+4.08-posledendenMAI-Roz+RA-diff-10-roz+RA-RA_10_qmka2_sn2.tif,Exp 04-Aug,RetAc,10.0,1.0,True,1,0.9813042879104614
+4.08-posledendenMAI-Roz+RA-diff-10-roz+RA-RA_10_qmka2_sn3.tif,Exp 04-Aug,RetAc,10.0,1.0,True,1,0.9701167345046997
+4.08-posledendenMAI-Roz+RA-diff-10-roz+RA-RA_10_qmka3_sn1.tif,Exp 04-Aug,RetAc,10.0,1.0,True,1,0.9742587804794312
+4.08-posledendenMAI-Roz+RA-diff-10-roz+RA-RA_10_qmka3_sn2.tif,Exp 04-Aug,RetAc,10.0,1.0,True,1,0.8741571307182312
+4.08-posledendenMAI-Roz+RA-diff-10-roz+RA-RA_10_qmka4_sn1.tif,Exp 04-Aug,RetAc,10.0,1.0,True,1,0.8511250615119934
+4.08-posledendenMAI-Roz+RA-diff-10-roz+RA-RA_10_qmka4_sn2.tif,Exp 04-Aug,RetAc,10.0,1.0,True,1,0.9445438981056213
+4.08-posledendenMAI-Roz+RA-diff-10-roz+RA-kontrl1.tif,Exp 04-Aug,,0.0,1.0,True,0,0.4916253089904785
+4.08-posledendenMAI-Roz+RA-diff-10-roz+RA-kontrl2.tif,Exp 04-Aug,,0.0,1.0,True,0,0.9094221591949463
+4.08-posledendenMAI-Roz+RA-diff-10-roz+RA-kontrl3.tif,Exp 04-Aug,,0.0,1.0,True,0,0.7021963596343994
+4.08-posledendenMAI-Roz+RA-diff-10-roz+RA-kontrl4.tif,Exp 04-Aug,,0.0,1.0,True,0,0.7656297087669373
+4.08-posledendenMAI-Roz+RA-diff-1-Roz+ra-kontrl1.tif,Exp 04-Aug,,0.0,1.0,True,0,0.861351728439331
+4.08-posledendenMAI-Roz+RA-diff-1-Roz+ra-kontrl2.tif,Exp 04-Aug,,0.0,1.0,True,0,0.4223167300224304
+4.08-posledendenMAI-Roz+RA-diff-1-Roz+ra-kontrl3.tif,Exp 04-Aug,,0.0,1.0,True,0,0.34954535961151123
+4.08-posledendenMAI-Roz+RA-diff-1-Roz+ra-kontrl4.tif,Exp 04-Aug,,0.0,1.0,True,0,0.8266600966453552
+4.08-posledendenMAI-roz-jiznenost-12.5+6.3-kontrl1.tif,Exp 04-Aug,,0.0,1.0,True,0,0.12015994638204575
+4.08-posledendenMAI-roz-jiznenost-12.5+6.3-kontrl2.tif,Exp 04-Aug,,0.0,1.0,True,0,0.04318840801715851
+4.08-posledendenMAI-roz-jiznenost-12.5+6.3-kontrl3.tif,Exp 04-Aug,,0.0,1.0,True,0,0.5246878266334534
+4.08-posledendenMAI-roz-jiznenost-12.5+6.3-kontrl4.tif,Exp 04-Aug,,0.0,1.0,True,0,0.25364506244659424
+4.08-posledendenMAI-roz-jiznenost-200+100-kontrl1.tif,Exp 04-Aug,,0.0,1.0,True,0,0.31207695603370667
+4.08-posledendenMAI-roz-jiznenost-200+100-kontrl2.tif,Exp 04-Aug,,0.0,1.0,True,0,0.43210121989250183
+4.08-posledendenMAI-roz-jiznenost-50+25-kontr1.tif,Exp 04-Aug,,0.0,1.0,True,0,0.10819341242313385
+4.08-posledendenMAI-roz-jiznenost-50+25-kontr2.tif,Exp 04-Aug,,0.0,1.0,True,0,0.2977772653102875
+4.08-posledendenMAI-roz-jiznenost-50+25-kontr3.tif,Exp 04-Aug,,0.0,1.0,True,0,0.4682450294494629
+4.08-posledendenMAI-roz-jiznenost-50+25-kontr4.tif,Exp 04-Aug,,0.0,1.0,True,0,0.287584513425827
+25.07-Kolonka1.tif,Exp 25-Jul,,0.0,10.0,False,0,0.10318983346223831
+25.07_MTT-SMQNAnaSR_RoS_RA-Plaka1-Kontr1.tif,Exp 25-Jul,,0.0,10.0,False,0,0.49491140246391296
+25.07_MTT-SMQNAnaSR_RoS_RA-Plaka1-Kontr2.tif,Exp 25-Jul,,0.0,10.0,False,0,0.3256847560405731
+25.07_MTT-SMQNAnaSR_RoS_RA-Plaka1-Kontr1SN2.tif,Exp 25-Jul,,0.0,10.0,False,0,0.25188860297203064
+28.07- ne ST_Mtt-kontrl1.tif,Exp 28-Jul,,0.0,10.0,False,0,0.14391472935676575
+28.07- ne ST_Mtt-Matrache1-prediSUB.tif,Exp 28-Jul,,0.0,10.0,False,0,0.11564895510673523
+28.07- ne ST_Mtt-Matrache2-prediSUB.tif,Exp 28-Jul,,0.0,10.0,False,0,0.09686171263456345
+28.07- ne ST_Mtt-Matrache3-prediSUB.tif,Exp 28-Jul,,0.0,10.0,False,0,0.09090091288089752
+28.07- ne ST_Mtt-plaka2-konrel1.tif,Exp 28-Jul,,0.0,10.0,False,0,0.2600190341472626
+28.07- ne ST_Mtt-plaka2-konrel2_SN2.tif,Exp 28-Jul,,0.0,10.0,False,0,0.6398776769638062
+28.07- ne ST_Mtt-plaka2-konrel2.tif,Exp 28-Jul,,0.0,10.0,False,0,0.3355928063392639
